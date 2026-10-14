@@ -1,0 +1,36 @@
+[
+  {
+    "title": "GitHub",
+    "hex": "181717",
+    "source": "https://github.com/logos",
+    "guidelines": "https://github.com/logos"
+  },
+  {
+    "title": "Instagram",
+    "hex": "E4405F",
+    "source": "https://about.meta.com/brand/resources/instagram",
+    "guidelines": "https://about.meta.com/brand/resources/instagram"
+  },
+  {
+    "title": "LinkedIn",
+    "hex": "0A66C2",
+    "source": "https://brand.linkedin.com",
+    "guidelines": "https://brand.linkedin.com/policies"
+  },
+  {
+    "title": "TikTok",
+    "hex": "000000",
+    "source": "https://tiktok.com"
+  },
+  {
+    "title": "X",
+    "hex": "000000",
+    "source": "https://x.com",
+    "guidelines": "https://about.x.com/en/who-we-are/brand-toolkit",
+    "aliases": {
+      "aka": [
+        "Twitter"
+      ]
+    }
+  }
+]

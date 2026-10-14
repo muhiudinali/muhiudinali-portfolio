@@ -1,0 +1,1 @@
+Four photorealistic assets generated for this portfolio: creative.png, marketing.png, development.png and branding.png. Source pixel files are copied unchanged. These are sample visuals, not client work. The website displays them in responsive CSS crops. Three six-second silent photo-motion studies in ../demo/ use these assets.

@@ -1,0 +1,1 @@
+Current font lock: Anton (PortfolioDisplay) for all website headings; DM Sans 400/700 (PortfolioSans) for paragraphs and simple/interface text. Fonts are local and their OFL licenses are included. The earlier Bodoni Moda serif file is retained as an unused legacy asset; the website no longer selects it for headings.
