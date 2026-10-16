@@ -19,7 +19,24 @@ export function AboutSection({ data }: { data: PortfolioData }) { const { profil
         <div className="about-board">
           <ScrollLayer className="about-oversize display" distance={200} tilt={6} dim><span aria-hidden="true">ABOUT<br /><span className="outline-text">ME.</span></span></ScrollLayer>
           <ScrollLayer className="about-portrait-layer" distance={-65}><div className="about-halo" aria-hidden="true" /><img src={profile.portrait_url} alt={profile.name} width={941} height={1672} loading="lazy" /><span className="portrait-caption">THE CREATIVE MIND<br />BEHIND THE PIXELS.</span></ScrollLayer>
-          <ScrollLayer className="about-copy" distance={90} tilt={2}><p className="eyebrow">HELLO AGAIN, I’M</p><h2 className="display about-name">{profile.name.toUpperCase()}<span>.</span></h2><h3>{profile.headline}</h3>{profile.about.split(/\n\s*\n/).map((p, i) => <p key={i}>{p}</p>)}<div className="about-disciplines">{services.slice(0, 3).map((s, i) => <span key={s.id}><b>0{i + 1}</b>{s.title}</span>)}</div><Link className="text-link" href="/contact">Let’s bring your idea to life<ArrowUpRight size={20} /></Link></ScrollLayer>
+          <ScrollLayer className="about-copy" distance={90} tilt={2}>
+            <p className="eyebrow">HELLO AGAIN, I’M</p>
+            <h2 className="display about-name">{profile.name.toUpperCase()}<span>.</span></h2>
+            <h3>{profile.headline}</h3>
+            {profile.about.split(/\n\s*\n/).map((p, i) => <p key={i}>{p}</p>)}
+            <div className="about-agency-highlight">
+              <a href="https://developerstech.netlify.app" target="_blank" rel="noopener noreferrer" className="agency-badge-link" title="Visit Developers Tech">
+                <img src="/assets/developerstech-logo.png" alt="Developers Tech" className="agency-badge-logo" width={110} height={28} />
+                <div className="agency-badge-text">
+                  <span className="agency-badge-role">CO-FOUNDER & PERFORMANCE MARKETER</span>
+                  <span className="agency-badge-name">Developers Tech · Agency ↗</span>
+                </div>
+              </a>
+              <p className="agency-badge-desc">Building growth systems, Meta & Google ad funnels, AI + UGC content, and eCommerce optimization alongside software engineering.</p>
+            </div>
+            <div className="about-disciplines">{services.slice(0, 3).map((s, i) => <span key={s.id}><b>0{i + 1}</b>{s.title}</span>)}</div>
+            <Link className="text-link" href="/contact">Let’s bring your idea to life<ArrowUpRight size={20} /></Link>
+          </ScrollLayer>
           <div className="board-bottom"><span>IDEAS INTO SOMETHING REAL.</span><span>✳</span><span>AI + MARKETING + DEVELOPMENT</span></div>
         </div>
       </ScrollScene>; }
@@ -54,7 +71,7 @@ export function JourneySection({ data }: { data: PortfolioData }) { const { expe
         <div className="section-kicker"><span>04 / MY JOURNEY</span><span>LEARN. CREATE. KEEP BUILDING.</span></div>
         <div className="journey-grid">
           <div className="journey-visual"><ScrollLayer className="journey-title" distance={180} tilt={4} dim><h2 className="display">FROM<br /><span className="outline-text">LEARNING.</span><br />TO BUILDING.</h2></ScrollLayer><ScrollLayer className="journey-art" distance={-70}><img src="/assets/photography/branding.png" alt="" loading="lazy" /><img src="/assets/photography/development.png" alt="" loading="lazy" /><span className="journey-seal">LEARN<br />CREATE<br />BUILD ↗</span></ScrollLayer></div>
-          <ScrollLayer className="journey-content" distance={65}><p className="eyebrow">THE EXPERIENCE</p>{experience.map((e, i) => <article className="experience-row" key={e.id}><span className="timeline-dot" aria-hidden="true">0{i + 1}</span><span className="experience-duration">{e.duration}</span><h3>{e.role}</h3><p className="company">{e.company}</p><p className="experience-description">{e.description}</p></article>)}<p className="eyebrow education-label">THE FOUNDATION</p><div className="education-grid">{education.map(e => <div key={e.id}><h4>{e.qualification}</h4><p>{e.status}</p></div>)}</div><div className="language-row"><span>Urdu & Punjabi · Fluent</span><span>English · Professional working</span></div></ScrollLayer>
+          <ScrollLayer className="journey-content" distance={65}><p className="eyebrow">THE EXPERIENCE</p>{experience.map((e, i) => { const isDT = e.company.toLowerCase().includes("developers tech"); return <article className={`experience-row ${isDT ? "experience-dt" : ""}`} key={e.id}><span className="timeline-dot" aria-hidden="true">0{i + 1}</span><span className="experience-duration">{e.duration}</span><h3>{e.role}</h3><p className="company">{isDT ? <a href="https://developerstech.netlify.app" target="_blank" rel="noopener noreferrer" className="company-link" title="Visit Developers Tech">{e.company}<ArrowUpRight size={13} /></a> : e.company}</p><p className="experience-description">{e.description}</p></article>; })}<p className="eyebrow education-label">THE FOUNDATION</p><div className="education-grid">{education.map(e => <div key={e.id}><h4>{e.qualification}</h4><p>{e.status}</p></div>)}</div><div className="language-row"><span>Urdu & Punjabi · Fluent</span><span>English · Professional working</span></div></ScrollLayer>
         </div>
       </ScrollScene>; }
 

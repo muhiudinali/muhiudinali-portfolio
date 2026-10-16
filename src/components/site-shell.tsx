@@ -13,7 +13,17 @@ export function SiteShell({ data, children, demonstration = false }: { data: Por
     {demonstration && <div className="preview-banner"><strong>PREVIEW</strong><span>Sample work</span><Link href="/skills">Explore skills<ArrowUpRight size={15} /></Link></div>}
     <Navbar name={profile.name} home={demonstration ? "/preview" : "/"} />
     <main id="main" tabIndex={-1}>{children}</main>
-    <footer className="site-footer"><Link className="brand" href="/">{profile.name.toUpperCase()}<span>↗</span></Link><div className="footer-socials">{socials.map(s => <a key={s.id} href={s.url} target="_blank" rel="noopener noreferrer">{s.label}<ArrowUpRight size={14} /></a>)}</div><small>© {new Date().getFullYear()} {profile.name}</small></footer>
+    <footer className="site-footer">
+      <div className="footer-brand-wrap">
+        <Link className="brand" href="/">{profile.name.toUpperCase()}<span>↗</span></Link>
+        <a className="footer-agency-link" href="https://developerstech.netlify.app" target="_blank" rel="noopener noreferrer" title="Developers Tech — Software House & Digital Marketing Agency">
+          <img src="/assets/developerstech-logo.png" alt="Developers Tech" className="footer-agency-logo" width={115} height={28} />
+          <span>Design and Developed By <strong>Developers Tech</strong> ↗</span>
+        </a>
+      </div>
+      <div className="footer-socials">{socials.map(s => <a key={s.id} href={s.url} target="_blank" rel="noopener noreferrer">{s.label}<ArrowUpRight size={14} /></a>)}</div>
+      <small>© {new Date().getFullYear()} {profile.name}</small>
+    </footer>
   </>;
 }
 

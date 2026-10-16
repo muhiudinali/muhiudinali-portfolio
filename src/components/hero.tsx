@@ -22,7 +22,14 @@ export function Hero({ profile, services, socials }: { profile: Profile; service
       <motion.div className="hero-orbits" data-running={inView && !reduced} style={reduced ? {} : { y: portraitY }} aria-hidden="true"><div className="sun-disc" /><span className="orbit orbit-one"><i className="orbit-particle" /></span><span className="orbit orbit-two"><i className="orbit-particle" /></span></motion.div>
       <motion.div className="hero-portrait-layer" style={reduced ? {} : { y: portraitY }}><img className="hero-portrait" src={profile.portrait_url} alt={profile.name} width={941} height={1672} fetchPriority="high" /></motion.div>
       <motion.div className="hero-intro" style={reduced ? {} : { y: textY, skewY: skew, opacity }}>
-        <p className="eyebrow hero-greeting">HELLO, I’M</p><h1 className="editorial hero-name"><span>{given.toUpperCase()}</span><span>{surname.toUpperCase()}<i>.</i></span></h1>
+        <div className="hero-kicker-row">
+          <p className="eyebrow hero-greeting">HELLO, I’M</p>
+          <a href="https://developerstech.netlify.app" target="_blank" rel="noopener noreferrer" className="hero-agency-pill" title="Co-Founder of Developers Tech">
+            <span className="pill-dot" />
+            <span>CO-FOUNDER @ DEVELOPERS TECH ↗</span>
+          </a>
+        </div>
+        <h1 className="editorial hero-name"><span>{given.toUpperCase()}</span><span>{surname.toUpperCase()}<i>.</i></span></h1>
         <ul className="hero-roles">{services.slice(0, 3).map(s => <li key={s.id}>{s.title}</li>)}</ul>
         <div className="hero-actions"><Link className="button blue" href="/projects">VIEW MY WORK<ArrowUpRight size={18} /></Link><Link className="button yellow" href="/contact">LET’S TALK<ArrowUpRight size={18} /></Link></div>
       </motion.div>

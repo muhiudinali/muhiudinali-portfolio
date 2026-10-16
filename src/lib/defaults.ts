@@ -4,8 +4,8 @@ import { cvSkills, cvSkillRows } from "./cv-skills";
 
 export const defaults: PortfolioData = {
   profile: {
-    id: 1, name: "Muhiudin Ali", headline: "Ideas into content. Clicks into growth. Code into experiences.",
-    about: "I bring AI content, performance marketing and development together to build digital experiences with a clear purpose. From creative concepts and ad campaigns to responsive websites and apps, I connect the idea, the audience and the execution.",
+    id: 1, name: "Muhiudin Ali", headline: "Co-Founder of Developers Tech · Ideas into content. Clicks into growth. Code into experiences.",
+    about: "I am the Co-Founder & Performance Marketer at Developers Tech, bringing AI content, performance marketing and full-stack development together to build digital products that scale. From creative ad campaigns and AI + UGC video production to high-converting eCommerce stores and web applications, I connect the idea, the audience and the execution.",
     email: "muhiudinali215@gmail.com", phone: "+92301-4772404", location: "Faisalabad, Pakistan",
     portrait_url: "/assets/portrait.png",
   },
@@ -16,8 +16,9 @@ export const defaults: PortfolioData = {
   ],
   skills: cvSkillRows,
   experience: [
-    { id: "44444444-4444-4444-8444-444444444444", company: "Vexuls Software House", role: "Frontend Developer", duration: "1 year 2 months", description: "Worked on international client projects, frontend and backend features, Next.js websites and AI-enabled web experiences.", sort_order: 0, enabled: true },
-    { id: "55555555-5555-4555-8555-555555555555", company: "Websoftice Agency", role: "AI Ads Creative & Ads Runner", duration: "6 months", description: "Created AI image and video ad creatives and worked on performance marketing campaigns.", sort_order: 1, enabled: true },
+    { id: "33333333-0000-4333-8333-111111111111", company: "Developers Tech", role: "Co-Founder & Performance Marketer", duration: "2024 — Present", description: "Co-founded the software house and digital marketing agency in Faisalabad. Leading full-funnel performance marketing, Meta, Google & TikTok ad campaigns, creative strategy with AI + UGC video content, Shopify eCommerce growth, and scaling clients worldwide.", sort_order: 0, enabled: true },
+    { id: "44444444-4444-4444-8444-444444444444", company: "Vexuls Software House", role: "Frontend Developer", duration: "1 year 2 months", description: "Worked on international client projects, frontend and backend features, Next.js websites and AI-enabled web experiences.", sort_order: 1, enabled: true },
+    { id: "55555555-5555-4555-8555-555555555555", company: "Websoftice Agency", role: "AI Ads Creative & Ads Runner", duration: "6 months", description: "Created AI image and video ad creatives and worked on performance marketing campaigns.", sort_order: 2, enabled: true },
   ],
   education: [
     { id: "66666666-6666-4666-8666-666666666666", qualification: "BS Computer Science", status: "Currently studying", sort_order: 0, enabled: true },

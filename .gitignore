@@ -6,3 +6,6 @@ out/
 !.env.example
 *.tsbuildinfo
 *.log
+scripts/supabase-apply.mjs
+scripts/update-developers-tech.mjs
+scripts/promote-admin.mjs

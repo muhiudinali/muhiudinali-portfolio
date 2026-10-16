@@ -185,8 +185,8 @@ create policy portfolio_admin_storage_delete on storage.objects for delete to au
 using (bucket_id = 'portfolio-media' and (select public.is_portfolio_admin()));
 
 insert into public.site_settings (id,name,headline,about,email,phone,location,portrait_url)
-values (1, 'Muhiudin Ali', 'Ideas into content. Clicks into growth. Code into experiences.',
-  'I bring AI content, performance marketing and development together to build digital experiences with a clear purpose. From creative concepts and ad campaigns to responsive websites and apps, I connect the idea, the audience and the execution.',
+values (1, 'Muhiudin Ali', 'Co-Founder of Developers Tech · Ideas into content. Clicks into growth. Code into experiences.',
+  'I am the Co-Founder & Performance Marketer at Developers Tech, bringing AI content, performance marketing and full-stack development together to build digital products that scale. From creative ad campaigns and AI + UGC video production to high-converting eCommerce stores and web applications, I connect the idea, the audience and the execution.',
   'muhiudinali215@gmail.com', '+92301-4772404', 'Faisalabad, Pakistan', '/assets/portrait.png')
 on conflict (id) do nothing;
 
@@ -216,8 +216,9 @@ where not exists (select 1 from public.skills)
 on conflict (id) do nothing;
 
 insert into public.experience (id,company,role,duration,description,sort_order) values
-('44444444-4444-4444-8444-444444444444','Vexuls Software House','Frontend Developer','1 year 2 months','Worked on international client projects, frontend and backend features, Next.js websites and AI-enabled web experiences.',0),
-('55555555-5555-4555-8555-555555555555','Websoftice Agency','AI Ads Creative & Ads Runner','6 months','Created AI image and video ad creatives and worked on performance marketing campaigns.',1)
+('33333333-0000-4333-8333-111111111111','Developers Tech','Co-Founder & Performance Marketer','2024 — Present','Co-founded the software house and digital marketing agency in Faisalabad. Leading full-funnel performance marketing, Meta, Google & TikTok ad campaigns, creative strategy with AI + UGC video content, Shopify eCommerce growth, and scaling clients worldwide.',0),
+('44444444-4444-4444-8444-444444444444','Vexuls Software House','Frontend Developer','1 year 2 months','Worked on international client projects, frontend and backend features, Next.js websites and AI-enabled web experiences.',1),
+('55555555-5555-4555-8555-555555555555','Websoftice Agency','AI Ads Creative & Ads Runner','6 months','Created AI image and video ad creatives and worked on performance marketing campaigns.',2)
 on conflict (id) do nothing;
 
 insert into public.education (id,qualification,status,sort_order) values
